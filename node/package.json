@@ -2,10 +2,17 @@
   "name": "node",
   "version": "1.0.0",
   "description": "'node code'",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node build/server.js",
+    "dev": "nodemon -e ts -w ./ -x npm run start"
   },
   "author": "wuyang",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11"
+  }
 }
